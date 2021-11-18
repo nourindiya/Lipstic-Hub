@@ -30,10 +30,11 @@ const Booking = () => {
 
     return (
         <div>
-            <h1 className="tittle">Purchase</h1>
+            <h1 className="tittle">Product Details</h1>
+            <hr />
             <div className="info-container w-50 m-5 mx-auto">
                 <div className="img">
-                    <img className="mt-3 w-75" src={img} alt="" />
+                    <img className="mt-3 w-50" src={img} alt="" />
                 </div>
 
                 <div className="info p-3">
@@ -48,7 +49,7 @@ const Booking = () => {
 
                 <div className="mt-5">
                     <hr />
-                    <h1 className="tittle">User Info :</h1>
+                    <h1 className="tittle">Confirm Purchase :</h1>
                     <Book
 
                         product={productToOrder}

@@ -1,7 +1,9 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 
 const Header = () => {
@@ -25,14 +27,16 @@ const Header = () => {
 
                         {
                             user.displayName ?
-                                <p className="pp text-light m-3">User : {user.displayName}</p> :
+                                <p className="pp text-light m-3">
+                                    <FontAwesomeIcon icon={faUser} className="text-light mx-2"> </FontAwesomeIcon>
+                                    User : {user.displayName}</p> :
                                 <p> </p>
                         }
 
 
                         {
                             user.email ?
-                                <button onClick={logout}>
+                                <button className="btn-2" onClick={logout}>
                                     Log Out
                                 </button>
                                 :

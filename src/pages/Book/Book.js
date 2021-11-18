@@ -5,6 +5,8 @@ const axios = require('axios');
 
 const Book = ({ product }) => {
 
+    const { name } = product
+
     const { user } = useAuth();
 
     const { register, handleSubmit, reset } = useForm();
@@ -12,14 +14,13 @@ const Book = ({ product }) => {
 
 
         const status = "Pending"
-        const orderdata = { ...data, status }
+        const orderdata = { ...data, status, productName: name }
 
         axios.post('http://localhost:5000/orders', orderdata)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Your Order Has been placed')
                     reset();
-
                 }
             });
     }
@@ -33,7 +34,7 @@ const Book = ({ product }) => {
         <div>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder="Enter Name" required {...register("name")} />
+                <input placeholder="Enter Name" required {...register("userName")} />
                 <br />
                 <br />
                 <input placeholder="Enter Address" required  {...register("address")} />

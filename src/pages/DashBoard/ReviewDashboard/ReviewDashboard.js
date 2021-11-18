@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../hooks/useAuth';
+import "./ReviewDashboard.css"
 
 const ReviewDashboard = () => {
     const { user } = useAuth();
@@ -22,14 +23,14 @@ const ReviewDashboard = () => {
 
 
     return (
-        <div>
-            <h1 className="tittle">Give Review</h1>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="form mx-auto ">
+            <h1 className="tittle mt-5">Drop Reviews :</h1>
+            <form onSubmit={handleSubmit(onSubmit)} className="mb-5 ">
 
-                <input value={user.displayName} {...register("name")} />
+                <input className="w-25" value={user.displayName} {...register("name")} />
                 <br />
                 <br />
-                <textarea {...register("description")} />
+                <textarea className="w-25" {...register("description")} />
                 <br />
                 <br />
                 <input className="btn-2 mb-3" type="submit" />

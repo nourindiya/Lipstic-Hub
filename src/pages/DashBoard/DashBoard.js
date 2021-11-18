@@ -13,17 +13,17 @@ const DashBoard = () => {
 
     return (
         <div>
-            <h1 className="tittle">Dash Board</h1>
-
             <div className="row">
                 <div className="col-md-3 ">
-                    <ul className="list-group">
+                    <h1 className="tittle mt-3">Welcome To Dashboard</h1>
 
-                        <li className="list-group-item ms-3"><Link to={`${url}/payment`} className="" style={{ textDecoration: 'none' }}>Payment</Link> </li>
+                    <ul className="list-group mt-2 mb-5">
 
-                        <li className="list-group-item ms-3"> <Link to={`${url}/myOrders`} className="" style={{ textDecoration: 'none' }}>My Order</Link> </li>
-                        <li className="list-group-item ms-3"><Link to={`${url}/reviews`} className="" style={{ textDecoration: 'none' }}>Reviews</Link></li>
-                        <li className="list-group-item ms-3"> <Link to="/home" className="" style={{ textDecoration: 'none' }}>Go to Home</Link> </li>
+                        <li className="list-group-item ms-3"><Link to={`${url}/payment`} className="text-dark" style={{ textDecoration: 'none' }}>Payment</Link> </li>
+
+                        <li className="list-group-item ms-3"> <Link to={`${url}/myOrders`} className="text-dark" style={{ textDecoration: 'none' }}>My Order</Link> </li>
+                        <li className="list-group-item ms-3"><Link to={`${url}/reviews`} className="text-dark" style={{ textDecoration: 'none' }}>Reviews</Link></li>
+                        <li className="list-group-item ms-3"> <Link to="/home" className="text-dark" style={{ textDecoration: 'none' }}>Go to Home</Link> </li>
                     </ul>
                 </div>
                 <div className="col-md-9 ">

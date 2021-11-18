@@ -14,9 +14,10 @@ const MyOrders = () => {
 
     return (
         <div>
-            <h1 className="tittle">My Orders</h1>
-            <table className="table">
-                <thead>
+            <h1 className="tittle mt-3">My Orders</h1>
+
+            <table className="table mt-3 ">
+                <thead >
                     <tr>
                         <th>Product</th>
                         <th>Order Stats</th>
@@ -24,12 +25,14 @@ const MyOrders = () => {
                     </tr>
 
                 </thead>
-                <tbody>
+                <tbody className="mb-3">
                     {
                         orders.map(order =>
                             <MySingleOrder
                                 key={order._id}
                                 order={order}
+                                setOrders={setOrders}
+                                orders={orders}
                             ></MySingleOrder>
                         )
                     }
