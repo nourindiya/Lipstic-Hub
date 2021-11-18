@@ -11,11 +11,15 @@ import Notfound from './pages/NotFound/Notfound';
 import Booking from './pages/Booking/Booking';
 import AuthProvider from './context/AuthProvider';
 import Allproducts from './pages/Allproducts/Allproducts';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import PrivateRoute from './PrivateRoute.js/PrivateRoute';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
+
         <Router>
           <Header></Header>
           <Switch>
@@ -29,8 +33,17 @@ function App() {
               <Home></Home>
             </Route>
 
-            <Route path="/booking/:id">
+            <PrivateRoute path="/booking/:id">
               <Booking></Booking>
+            </PrivateRoute>
+
+
+            <Route path="/logIn">
+              <Login></Login>
+            </Route>
+
+            <Route path="/register">
+              <Register></Register>
             </Route>
 
 

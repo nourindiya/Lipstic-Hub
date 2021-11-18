@@ -10,7 +10,9 @@ const AuthProvider = ({ children }) => {
     return (
 
         <AuthContext.Provider value={allContexts}>
+
             {children}
+
         </AuthContext.Provider>
     );
 };

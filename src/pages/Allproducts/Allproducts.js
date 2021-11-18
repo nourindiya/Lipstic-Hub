@@ -21,12 +21,7 @@ const Allproducts = () => {
         <div>
             <p className="tittle fw-bold pt-5">All Products</p>
             <div className="service-container">
-                {/* {
-                    products.map(product =>
-                        <h1>{product.name}</h1>
 
-                    )
-                } */}
                 {
                     products.map(product =>
                         <Product
