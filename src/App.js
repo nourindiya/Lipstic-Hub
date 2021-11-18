@@ -14,6 +14,9 @@ import Allproducts from './pages/Allproducts/Allproducts';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import PrivateRoute from './PrivateRoute.js/PrivateRoute';
+import DashBoard from './pages/DashBoard/DashBoard';
+import Payment from './pages/Payment/Payment';
+
 
 function App() {
   return (
@@ -45,6 +48,12 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
+
+            <Route path="/dashBoard">
+              <DashBoard></DashBoard>
+            </Route>
+
+
 
 
             <Route path="/allProducts">

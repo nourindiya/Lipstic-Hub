@@ -19,6 +19,9 @@ const Header = () => {
 
                         <Nav.Link className="link" as={Link} to="/allProducts">All Products</Nav.Link>
 
+                        {
+                            user.email && <Nav.Link className="link" as={Link} to="/dashBoard">Dashboard</Nav.Link>
+                        }
 
                         {
                             user.displayName ?
