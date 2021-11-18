@@ -1,0 +1,28 @@
+.footer{
+    /* background-color: black; */
+    background-color: rgba(0, 0, 0, 0.972);
+    color: rgb(221, 221, 235);
+  
+    
+ 
+}
+
+.p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(75, 73, 73);
+    font-size: large;
+}
+
+.red{
+    color: darkred;
+}
+.blue{
+    color: powderblue;
+}
+.orange{
+    color: orange;
+}
+
+.gray{
+    color: slategrey;
+}

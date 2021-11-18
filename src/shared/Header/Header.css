@@ -1,0 +1,11 @@
+.nav{
+    background-color: black;
+}
+.link{
+color: aliceblue;
+}
+
+.link:hover {
+    color: black;
+    background-color: blanchedalmond;
+}
