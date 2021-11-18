@@ -28,7 +28,7 @@ const MySingleOrder = ({ order, setOrders, orders }) => {
             <td>{productName}
             </td>
             <td>{status}</td>
-            <td><button onClick={() => handleOderDelete(order._id)} className="btn-2" type="submit">Delete</button></td>
+            <td><button onClick={() => handleOderDelete(order._id)} className="btn-2" type="submit">Cancel</button></td>
         </tr>
     );
 };
