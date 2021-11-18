@@ -21,7 +21,7 @@ const MyOrders = () => {
                     <tr>
                         <th>Product</th>
                         <th>Order Stats</th>
-                        <th>Action</th>
+                        <th>Cancel Order</th>
                     </tr>
 
                 </thead>
