@@ -16,7 +16,7 @@ const Book = ({ product }) => {
         const status = "Pending"
         const orderdata = { ...data, status, productName: name }
 
-        axios.post('http://localhost:5000/orders', orderdata)
+        axios.post('https://shrouded-badlands-09931.herokuapp.com/orders', orderdata)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Your Order Has been placed')

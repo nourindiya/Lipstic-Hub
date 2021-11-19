@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const ManageSingleProduct = ({ product, products, setProducts }) => {
     const { name, img, price, _id } = product;
@@ -8,7 +8,7 @@ const ManageSingleProduct = ({ product, products, setProducts }) => {
     const handleProductDelete = (id) => {
         const procceed = window.confirm('Are you sure you want to delete?')
         if (procceed) {
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`https://shrouded-badlands-09931.herokuapp.com/products/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -22,7 +22,6 @@ const ManageSingleProduct = ({ product, products, setProducts }) => {
         }
     }
 
-
     return (
         < tr>
             <td>
@@ -35,7 +34,7 @@ const ManageSingleProduct = ({ product, products, setProducts }) => {
                 $ {price}
             </td >
             <td>
-                <button onClick={() => handleProductDelete(product._id)}
+                <button onClick={() => handleProductDelete(_id)}
 
                     className="btn-2">Delete</button>
             </td>

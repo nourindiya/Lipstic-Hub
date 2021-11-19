@@ -68,7 +68,7 @@ const useFirebase = () => {
 
     const handleUserSave = (name, email) => {
         const userData = { name: name, email: email, role: role };
-        axios.post("http://localhost:5000/users", userData)
+        axios.post("https://shrouded-badlands-09931.herokuapp.com/users", userData)
             .then()
     }
 

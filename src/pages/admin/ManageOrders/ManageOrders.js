@@ -8,7 +8,7 @@ const ManageOrders = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://shrouded-badlands-09931.herokuapp.com/orders/manageOrders")
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user])
@@ -20,20 +20,20 @@ const ManageOrders = () => {
                 <thead>
                     <tr>
                         <th>Product Name</th>
-                        <th>Order Stats</th>
+                        <th>Order Status</th>
                         <th>Approve/Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <ManageSingleOrder
-
-                        key={orders._id}
-                        setOrders={setOrders}
-                        orders={orders}
-                    >
-
-
-                    </ManageSingleOrder>
+                    {
+                        orders.map(order => <ManageSingleOrder
+                            key={orders._id}
+                            setOrders={setOrders}
+                            orders={orders}
+                            order={order}
+                        >
+                        </ManageSingleOrder>)
+                    }
 
                 </tbody>
             </table>

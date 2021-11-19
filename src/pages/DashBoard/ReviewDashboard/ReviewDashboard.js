@@ -8,7 +8,7 @@ const ReviewDashboard = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         const reviewData = { ...data }
-        fetch(`http://localhost:5000/reviews?email=${user.email}`, {
+        fetch(`https://shrouded-badlands-09931.herokuapp.com/reviews?email=${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

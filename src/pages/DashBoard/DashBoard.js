@@ -19,7 +19,7 @@ const DashBoard = () => {
     let { path, url } = useRouteMatch();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users?email=${user.email}`)
+        fetch(`https://shrouded-badlands-09931.herokuapp.com/users?email=${user.email}`)
             .then(res => res.json())
             .then(data => setLoadedUser(data))
     }, [])

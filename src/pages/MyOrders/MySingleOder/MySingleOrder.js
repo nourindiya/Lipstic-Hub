@@ -7,7 +7,7 @@ const MySingleOrder = ({ order, setOrders, orders }) => {
     const handleOderDelete = (id) => {
         const procceed = window.confirm('Are you sure to delete this ordder?')
         if (procceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://shrouded-badlands-09931.herokuapp.com/orders/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

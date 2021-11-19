@@ -20,7 +20,7 @@ const Booking = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booking/${id}`)
+        fetch(`https://shrouded-badlands-09931.herokuapp.com/booking/${id}`)
             .then(res => res.json())
             .then(data => setProductToOrder(data))
     }, [])
