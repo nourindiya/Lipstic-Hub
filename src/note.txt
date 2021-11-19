@@ -1,0 +1,4 @@
+  // ------------------------------------------------\\
+    // Env file is not working.
+    // NOTE : I have already installed react dotenv
+    // ------------------------------------------------\\
